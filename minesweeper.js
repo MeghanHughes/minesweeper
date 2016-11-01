@@ -41,14 +41,11 @@ function checkForWin () {
     if (board.cells[i].isMine && !board.cells[i].isMarked) {
       return;
     }
-    else if (board.cells[i].isMine && !board.cells[i].hidden){
+    if (board.cells[i].isMine && !board.cells[i].hidden) {
       return ;
     }
-    else if (!board.cells[i].isMine && board.cells[i].hidden) {
-      return;
-    }
   }  lib.displayMessage('You win!');
-    }
+}
 
 
 // Define this function to count the number of mines around the cell
